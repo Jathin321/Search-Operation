@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Data</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(233, 78, 107);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 340px;
+            height: 540px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 4px 4px 30px rgb(0,0,0,0.6);
+            padding: 20px;
+            overflow-y: scroll;
+        }
+        .container::-webkit-scrollbar{
+            display: none;
+        }
+        .container form{
+            width: 100%;
+            border: 3px solid rgb(233, 78, 107);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .container form ion-icon{
+            padding-left: 10px;
+            font-size: larger;
+            font-weight: 600;
+        }
+        .container form input{
+            border: none;
+            outline: none;
+            box-shadow: none;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 10px;
+        }
+        .product-list{
+            margin-top: 20px;
+        }
+        .product{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding-top: 10px;
+        }
+        .product h3{
+            border: 3px solid rgb(233, 78, 107);
+            color: rgb(233, 78, 107);
+            text-align: center;
+            width: 200px;
+            height: 40px;
+            padding-top: 3px;
+        }
+        .product p{
+            background-color: rgb(233, 78, 107);
+            text-align: center;
+            color: #fff;
+            width: 120px;
+            height: 40px;
+            padding-top: 8px;
+        }
+
+
+        .hproduct{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .hproduct h3{
+            border: 3px solid rgb(233, 78, 107);
+            color: rgb(233, 78, 107);
+            text-align: center;
+            width: 200px;
+        }
+        .hproduct p{
+            background-color: rgb(233, 78, 107);
+            text-align: center;
+            color: #fff;
+            width: 120px;
+            padding-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <form>
+            <ion-icon name="search-outline"></ion-icon>
+            <input type="text" placeholder="Search" id="search-item" onkeyup="search()">
+        </form>
+        <div class="hproduct">
+            <p class="hroll">Regn.No</p>
+            <h3>Name</h3>
+        </div>
+        <div class="product-list" id="product-list">
+            <div class="product">
+                <p class="roll">22L31A1201</p>
+                <h3>A.LOKESH</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1202</p>
+                <h3>MANISH</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1203</p>
+                <h3>RAHUL SAI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1204</p>
+                <h3>LAWRENCE</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1205</p>
+                <h3>PRADEEP</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1206</p>
+                <h3>BALAJI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1207</p>
+                <h3>RADHIKA</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1208</p>
+                <h3>VISHNU</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1209</p>
+                <h3>ROHITHA</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1210</p>
+                <h3>YUGANDHAR</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1211</p>
+                <h3>YASHWANTH</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1212</p>
+                <h3>MOHAN SHYAM</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1213</p>
+                <h3>BHAVYA SRI SAI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1214</p>
+                <h3>BHAVYA SRI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1215</p>
+                <h3>GURU KRISHNA</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1216</p>
+                <h3>VIJAYA</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1217</p>
+                <h3>PRASANTH</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1218</p>
+                <h3>SAI KIRAN</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1219</p>
+                <h3>GAYATHRI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1220</p>
+                <h3>JATHIN</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1221</p>
+                <h3>G.JAHNAVI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1222</p>
+                <h3>PRAVEEN</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1223</p>
+                <h3>(DETAINED)</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1224</p>
+                <h3>ANANTH</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1225</p>
+                <h3>YOGA SRI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1226</p>
+                <h3>K.VIJAY</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1227</p>
+                <h3>KHAN</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1228</p>
+                <h3>MANOHAR</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1229</p>
+                <h3>KEERTHI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1230</p>
+                <h3>SANJANA</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1231</p>
+                <h3>VENKAT</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1232</p>
+                <h3>SHAMJITH RAM</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1233</p>
+                <h3>SAILESH</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1234</p>
+                <h3>P.VIJAY</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1235</p>
+                <h3>P.LOKESH</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A4319</p>
+                <h3>HARI SAI</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1261</p>
+                <h3>PRAVALLIKA</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1262</p>
+                <h3>LOKESH MANDAL</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1263</p>
+                <h3>RITU YADAV</h3>
+            </div>
+            <div class="product">
+                <p class="roll">22L31A1264</p>
+                <h3>SAPANA YADAV</h3>
+            </div>
+        </div>
+    </section>
+    <script>
+        function search() {
+            let searchbox = document.getElementById('search-item').value.toUpperCase().split(" ").join("")
+            let storeitems = document.getElementById('product-list')
+            let product = document.querySelectorAll(".product")
+            // let proll = document.querySelectorAll(".roll")
+            // console.log(proll)
+            // console.log(product)
+
+            for(var i=0; i < product.length; i++){
+                let match = product[i].getElementsByTagName("h3")[0];
+                let match2 = product[i].getElementsByTagName("p")[0];
+                console.log(match)
+                if(match){
+                    let textvalue = match.textContent
+                    let textvalue2 = match2.textContent
+                    if(textvalue.split(" ").join("").indexOf(searchbox) > -1){
+                        product[i].style.display = "";
+                    }
+                    else if(textvalue2.indexOf(searchbox) > -1){
+                        product[i].style.display = "";
+                    }
+                    else{
+                        product[i].style.display = "none";
+                    }
+                }
+                //  if(match2){
+                //     let textvalue = match2.textContent 
+                //     if(textvalue.indexOf(searchbox) > -1){
+                //         product[i].style.display = "";
+                //     }
+                //     else{
+                //         product[i].style.display = "none";
+                //     }
+                // }
+                
+            }
+
+            // for(var i=0; i < proll.length; i++){
+            //     let match = proll[i].getElementsByTagName("p")[0];
+            //     if(match){
+            //         let textvalue = match.textContent 
+            //         if(textvalue.indexOf(searchbox) > -1){
+            //             proll[i].style.display = "";
+            //         }
+            //         else{
+            //             proll[i].style.display = "none";
+            //         }
+            //     }
+            // }
+        }
+    </script>
+</body>
+</html>
